@@ -3,7 +3,7 @@
 <div class="container">
 	<p class="h2">Lựa chọn thông tin tìm kiếm nhà:</p>
 	<p class="small">
-		Thông tin tìm kiếm đã được tạo sẵn, bạn có thể tìm dựa theo thông tin từ ACE cung cấp ! 
+		Thông tin tìm kiếm đã được tạo sẵn, lựa chọn khu vực tương ứng ! 
 	</p>
 	<div class="row">
 		<div class="col-sm groupSearch">
@@ -23,7 +23,7 @@
 			  		<img class="img-thumbnail" src="${pageContext.request.contextPath}/resources/images/logoSuumo.png"/><br>
 			  		<hr>
 			  		<label>賃貸 > 東京都 > 渋谷区 > <b>渋谷駅</b>の賃貸情報</label>
-			  		<input type="hidden" name="condition" value="https://suumo.jp/jj/chintai/ichiran/FR301FC005/?url=%2Fchintai%2Fichiran%2FFR301FC005%2F&ar=030&bs=040&smk=&po1=25&po2=99&shkr1=03&shkr2=03&shkr3=03&shkr4=03&cb=0.0&ct=10.0&md=01&md=02&md=03&md=04&ts=1&ts=2&et=15&mb=0&mt=9999999&cn=9999999&ra=013&ek=000517640&rn=0005&pc=10"/>
+			  		<input type="hidden" name="condition" value="https://suumo.jp/jj/chintai/ichiran/FR301FC005/?url=%2Fchintai%2Fichiran%2FFR301FC005%2F&ar=030&bs=040&smk=&po1=25&po2=99&shkr1=03&shkr2=03&shkr3=03&shkr4=03&cb=0.0&ct=10.0&md=01&md=02&md=03&md=04&ts=1&ts=2&et=15&mb=0&mt=9999999&cn=9999999&ra=013&ek=000517640&rn=0005&pc=100"/>
 					<input type="submit" class="btn btn-outline-primary" value="Check House"/>
 				</div>
 			</form:form>

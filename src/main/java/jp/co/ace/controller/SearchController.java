@@ -39,14 +39,17 @@ public class SearchController {
         	lists.put("link", link.get(i).getAttribute("href"));
         	rows.add(lists);
         }
-        String results = countResult.get(0).getText();
+        if(countResult != null) {
+        	String results = countResult.get(0).getText();
+        	model.addAttribute("results",results);
+        }
+        
         String searchdetail = driver.getTitle();
         //Close the browser
         driver.quit();
         
 		model.addAttribute("condition",condition);
-		model.addAttribute("rows",rows);
-		model.addAttribute("results",results);
+		model.addAttribute("rows",rows);		
 		model.addAttribute("searchdetail",searchdetail);
 		model.addAttribute("title","Resut search");
 		return "search/searchList"; 

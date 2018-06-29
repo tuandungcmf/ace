@@ -38,7 +38,7 @@ public class HouseDetail implements Serializable {
      *
      * @mbg.generated Fri Jun 29 11:42:52 JST 2018
      */
-    private Integer housePrice;
+    private String housePrice;
 
     /**
      *
@@ -182,7 +182,7 @@ public class HouseDetail implements Serializable {
      *
      * @mbg.generated Fri Jun 29 11:42:52 JST 2018
      */
-    public Integer getHousePrice() {
+    public String getHousePrice() {
         return housePrice;
     }
 
@@ -194,7 +194,7 @@ public class HouseDetail implements Serializable {
      *
      * @mbg.generated Fri Jun 29 11:42:52 JST 2018
      */
-    public void setHousePrice(Integer housePrice) {
+    public void setHousePrice(String housePrice) {
         this.housePrice = housePrice;
     }
 

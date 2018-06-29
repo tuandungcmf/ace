@@ -10,7 +10,7 @@
     <id column="house_detail_ID" jdbcType="INTEGER" property="id" />
     <result column="house_detail_HOUSE_NAME" jdbcType="VARCHAR" property="houseName" />
     <result column="house_detail_HOUSE_DETAIL" jdbcType="VARCHAR" property="houseDetail" />
-    <result column="house_detail_HOUSE_PRICE" jdbcType="INTEGER" property="housePrice" />
+    <result column="house_detail_HOUSE_PRICE" jdbcType="VARCHAR" property="housePrice" />
     <result column="house_detail_HOUSE_ADDRESS" jdbcType="VARCHAR" property="houseAddress" />
     <result column="house_detail_CREATE_DATE" jdbcType="TIMESTAMP" property="createDate" />
     <result column="house_detail_UPDATE_DATE" jdbcType="TIMESTAMP" property="updateDate" />
@@ -158,7 +158,7 @@
       HOUSE_ADDRESS, CREATE_DATE, UPDATE_DATE, 
       ACCOUNT_ID, CATEGORY_ID, EXCLUSIVE
       )
-    values (#{houseName,jdbcType=VARCHAR}, #{houseDetail,jdbcType=VARCHAR}, #{housePrice,jdbcType=INTEGER}, 
+    values (#{houseName,jdbcType=VARCHAR}, #{houseDetail,jdbcType=VARCHAR}, #{housePrice,jdbcType=VARCHAR}, 
       #{houseAddress,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, #{updateDate,jdbcType=TIMESTAMP}, 
       #{accountId,jdbcType=INTEGER}, #{categoryId,jdbcType=INTEGER}, #{exclusive,jdbcType=INTEGER}
       )
@@ -207,7 +207,7 @@
         #{houseDetail,jdbcType=VARCHAR},
       </if>
       <if test="housePrice != null">
-        #{housePrice,jdbcType=INTEGER},
+        #{housePrice,jdbcType=VARCHAR},
       </if>
       <if test="houseAddress != null">
         #{houseAddress,jdbcType=VARCHAR},
@@ -258,7 +258,7 @@
         house_detail.HOUSE_DETAIL = #{record.houseDetail,jdbcType=VARCHAR},
       </if>
       <if test="record.housePrice != null">
-        house_detail.HOUSE_PRICE = #{record.housePrice,jdbcType=INTEGER},
+        house_detail.HOUSE_PRICE = #{record.housePrice,jdbcType=VARCHAR},
       </if>
       <if test="record.houseAddress != null">
         house_detail.HOUSE_ADDRESS = #{record.houseAddress,jdbcType=VARCHAR},
@@ -293,7 +293,7 @@
     set house_detail.ID = #{record.id,jdbcType=INTEGER},
       house_detail.HOUSE_NAME = #{record.houseName,jdbcType=VARCHAR},
       house_detail.HOUSE_DETAIL = #{record.houseDetail,jdbcType=VARCHAR},
-      house_detail.HOUSE_PRICE = #{record.housePrice,jdbcType=INTEGER},
+      house_detail.HOUSE_PRICE = #{record.housePrice,jdbcType=VARCHAR},
       house_detail.HOUSE_ADDRESS = #{record.houseAddress,jdbcType=VARCHAR},
       house_detail.CREATE_DATE = #{record.createDate,jdbcType=TIMESTAMP},
       house_detail.UPDATE_DATE = #{record.updateDate,jdbcType=TIMESTAMP},
@@ -319,7 +319,7 @@
         HOUSE_DETAIL = #{houseDetail,jdbcType=VARCHAR},
       </if>
       <if test="housePrice != null">
-        HOUSE_PRICE = #{housePrice,jdbcType=INTEGER},
+        HOUSE_PRICE = #{housePrice,jdbcType=VARCHAR},
       </if>
       <if test="houseAddress != null">
         HOUSE_ADDRESS = #{houseAddress,jdbcType=VARCHAR},
@@ -351,7 +351,7 @@
     update house_detail
     set HOUSE_NAME = #{houseName,jdbcType=VARCHAR},
       HOUSE_DETAIL = #{houseDetail,jdbcType=VARCHAR},
-      HOUSE_PRICE = #{housePrice,jdbcType=INTEGER},
+      HOUSE_PRICE = #{housePrice,jdbcType=VARCHAR},
       HOUSE_ADDRESS = #{houseAddress,jdbcType=VARCHAR},
       CREATE_DATE = #{createDate,jdbcType=TIMESTAMP},
       UPDATE_DATE = #{updateDate,jdbcType=TIMESTAMP},

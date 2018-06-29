@@ -36,13 +36,17 @@ public class GetDataThreadController {
 		WebDriver driver = new HtmlUnitDriver();
 		driver.get(link);
 		List<WebElement> title = driver.findElements(By.className("section_title"));
+		List<WebElement> address = driver.findElements(By.className("data_around"));
+		List<WebElement> price = driver.findElements(By.className("detailvalue"));
+		List<WebElement> detail = driver.findElements(By.className("section"));
 		
-		System.out.println(title.get(0).getText());
 		
 		HouseDetail houses = new HouseDetail();
-		houses.setCategoryId(2);
 		houses.setHouseName(title.get(0).getText());
-		houses.setHouseAddress("shinjuku");
+		houses.setHousePrice(price.get(0).getText());
+		houses.setHousePrice(price.get(0).getText());
+		houses.setHouseDetail(detail.get(1).getText());
+		houses.setHouseAddress(address.get(0).getText());
 		houseService.insert(houses);
 		
 		driver.quit();		

@@ -14,7 +14,7 @@ public class HouseDetailForm  implements Serializable {
 	@Size(max=255)
 	private String houseDetail;
 
-	private Integer housePrice;
+	private String housePrice;
 
 	@Size(max=255)
 	private String houseAddress;
@@ -44,10 +44,10 @@ public class HouseDetailForm  implements Serializable {
 		this.houseDetail = houseDetail;
 	}
 
-	public Integer getHousePrice(){
+	public String getHousePrice(){
 		return housePrice;
 	}
-	public void setHousePrice(Integer housePrice){
+	public void setHousePrice(String housePrice){
 		this.housePrice = housePrice;
 	}
 
