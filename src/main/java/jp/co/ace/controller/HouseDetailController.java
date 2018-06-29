@@ -17,15 +17,12 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import jp.co.ace.entities.HouseDetail;
+import jp.co.ace.entity.HouseDetail;
 import jp.co.ace.form.HouseDetailForm;
 import jp.co.ace.service.HouseDetailService;
-import lombok.extern.slf4j.Slf4j;
 
 @Controller
 @RequestMapping("houseDetail")
-@SessionAttributes({"houseDetailForm"})
-@Slf4j
 public class HouseDetailController{
 
 	@Autowired

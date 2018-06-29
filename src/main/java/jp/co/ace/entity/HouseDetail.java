@@ -1,4 +1,4 @@
-package jp.co.ace.entities;
+package jp.co.ace.entity;
 
 import java.io.Serializable;
 import java.util.Date;

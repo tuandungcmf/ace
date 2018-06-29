@@ -1,6 +1,7 @@
 package jp.co.ace.controller;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -16,16 +17,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import jp.co.ace.dao.HomeDAO;
-import jp.co.ace.entities.Home;
+import jp.co.ace.entity.HouseDetail;
+import jp.co.ace.service.HouseDetailService;
 
 @Controller
 @Component
 @RequestMapping("thread")
 public class GetDataThreadController {
-				
-	@Autowired
-	private HomeDAO homeDAO;
+	
+	@Autowired			
+	HouseDetailService houseService;
 	
 	@RequestMapping(value="detail", method= RequestMethod.GET)
 	@ResponseBody
@@ -36,28 +37,17 @@ public class GetDataThreadController {
 		driver.get(link);
 		List<WebElement> title = driver.findElements(By.className("section_title"));
 		
-		Date now = new Date();
+		System.out.println(title.get(0).getText());
 		
-		model.addAttribute("house_detail", new Home());
+		HouseDetail houses = new HouseDetail();
+		houses.setCategoryId(2);
+		houses.setHouseName(title.get(0).getText());
+		houses.setHouseAddress("shinjuku");
+		houseService.insert(houses);
 		
-		Home homeDB = new Home();
-		homeDB.setHouseName("ABC");
-		homeDB.setHousePrice(50000);
-		homeDAO.persist(homeDB);
-		
-//			house.setTitle(title.get(0).getText());
-		driver.quit();
-//			house.setContent("ABC");
-//			house.setPrice(50000);
-//			house.setAddress("渋谷");
-//			house.setCreateDate(now);
-//			house.setUpdateDate(now);
-//			house.setAccountInputId(1);
-		
-//			houseInfoMapper.insert(house);			
+		driver.quit();		
 		
 		return link;
 	}	
 		
-	}
-
+}

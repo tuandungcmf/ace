@@ -4,12 +4,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.validation.constraints.NotNull;
-import org.hibernate.validator.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 public class HouseDetailForm  implements Serializable {
 
-	@NotBlank
 	@Size(max=255)
 	private String houseName;
 

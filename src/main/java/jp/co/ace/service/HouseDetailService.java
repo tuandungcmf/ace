@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import jp.co.ace.entities.HouseDetail;
-import jp.co.ace.entities.HouseDetailExample;
+import jp.co.ace.entity.HouseDetail;
+import jp.co.ace.entity.HouseDetailExample;
 import jp.co.ace.mapper.HouseDetailMapper;
 
 @Service

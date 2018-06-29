@@ -1,9 +1,11 @@
 package jp.co.ace.mapper;
 
 import java.util.List;
-import jp.co.ace.entities.HouseDetail;
-import jp.co.ace.entities.HouseDetailExample;
+
 import org.apache.ibatis.annotations.Param;
+
+import jp.co.ace.entity.HouseDetail;
+import jp.co.ace.entity.HouseDetailExample;
 
 public interface HouseDetailMapper {
     /**

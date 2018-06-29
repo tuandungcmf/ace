@@ -1,4 +1,4 @@
-package jp.co.ace.entities;
+package jp.co.ace.entity;
 
 import java.util.ArrayList;
 import java.util.Date;
