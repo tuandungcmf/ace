@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<%@include file="/WEB-INF/views/define.jsp" %> %>
+<%@include file="/WEB-INF/views/define.jsp" %>
 
 <!DOCTYPE html>
 <html lang="ja-JP">
@@ -20,9 +20,7 @@
 </head>
 <body>
 <%@include file="/WEB-INF/views/common/header.jsp" %>
-aa
 	<tiles:insertAttribute name="body" />
-
 <%@include file="/WEB-INF/views/common/footer.jsp" %>
 </body>
 </html>

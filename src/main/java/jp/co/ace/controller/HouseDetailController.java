@@ -1,5 +1,6 @@
 package jp.co.ace.controller;
 
+import java.util.List;
 import java.util.Locale;
 
 import javax.validation.Valid;
@@ -38,6 +39,8 @@ public class HouseDetailController{
 
 	@RequestMapping("list")
 	public String list(Model model){
+		List<HouseDetail> houseDetails = houseDetailService.getList();
+		model.addAttribute("houseDetails", houseDetails);
 		return "houseDetail/houseDetailList";
 	}
 

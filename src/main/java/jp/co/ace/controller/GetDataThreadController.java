@@ -40,10 +40,15 @@ public class GetDataThreadController {
 		List<WebElement> price = driver.findElements(By.className("detailvalue"));
 		List<WebElement> detail = driver.findElements(By.className("section"));
 		
-		
+		List<WebElement> panaromabox = driver.findElements(By.className("panoramabox"));
+				
 		HouseDetail houses = new HouseDetail();
 		houses.setHouseName(title.get(0).getText());
-		houses.setHousePrice(price.get(0).getText());
+		houses.setLinkId(link);
+//		if(panaromabox.get(0)!=null) {
+//			houses.setPanaroma(panaromabox.get(0).getAttribute("innerHTML"));	
+//		}
+		
 		houses.setHousePrice(price.get(0).getText());
 		houses.setHouseDetail(detail.get(1).getText());
 		houses.setHouseAddress(address.get(0).getText());

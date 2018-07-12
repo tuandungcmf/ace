@@ -2,9 +2,14 @@
 <%@include file="/WEB-INF/views/define.jsp" %>
 <div class="container">
 	<p class="h2">Lựa chọn thông tin tìm kiếm nhà:</p>
-	<p class="small">
-		Thông tin tìm kiếm đã được tạo sẵn, lựa chọn khu vực tương ứng ! 
-	</p>
+	<form:form action="search/more" method="get">
+		<%@include file="/WEB-INF/views/common/searchAttribute.jsp" %>
+		<hr>
+		<%@include file="/WEB-INF/views/common/searchLine.jsp" %>
+		<input type="submit" class="btn btn-outline-primary" value="Tìm kiếm"/>
+	</form:form>
+	
+	
 	<div class="row">
 		<div class="col-sm groupSearch">
 			<form:form action="search/result">
@@ -39,6 +44,18 @@
 				</div>
 			</form:form>
 		</div>
+		<div class="col-sm groupSearch">
+			<form:form action="search/result">
+			  	<div class="form-group">
+			  		<img class="img-thumbnail" src="${pageContext.request.contextPath}/resources/images/logoSuumo.png"/><br>
+			  		<hr>
+			  		<label>賃貸 > 東京都 > 新宿区 > <b>高田馬場駅</b></label>
+			  		<input type="hidden" name="condition" value="https://suumo.jp/jj/chintai/ichiran/FR301FC005/?shkr1=03&cb=5.0&shkr3=03&shkr2=03&rn=0005&smk=&mt=9999999&ar=030&bs=040&shkr4=03&ct=7.0&ra=013&ek=000522350&md=02&cn=9999999&mb=0&fw2=&et=5"/>
+					<input type="submit" class="btn btn-outline-primary" value="Check House"/>
+				</div>
+			</form:form>
+		</div>
+		
 	</div>
-</div>
+</div>  
 <%@include file="/WEB-INF/views/common/footer.jsp" %>

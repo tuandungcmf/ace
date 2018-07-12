@@ -3,25 +3,11 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
- 	<definition name="houseDetail/houseDetailList" extends="layout">
-		<put-attribute name="body" value="/WEB-INF/views/houseDetail/houseDetailList.jsp" />
-	</definition>
-	<definition name="houseDetail/houseDetailInput" extends="layout">
-		<put-attribute name="body" value="/WEB-INF/views/houseDetail/houseDetailInput.jsp" />
-	</definition>
-	<definition name="houseDetail/houseDetailInputConfirm" extends="layout">
-		<put-attribute name="body" value="/WEB-INF/views/houseDetail/houseDetailInputConfirm.jsp" />
-	</definition>
-	<definition name="houseDetail/houseDetailEdit" extends="layout">
-		<put-attribute name="body" value="/WEB-INF/views/houseDetail/houseDetailEdit.jsp" />
-	</definition>
-	<definition name="houseDetail/houseDetailEditConfirm" extends="layout">
-		<put-attribute name="body" value="/WEB-INF/views/houseDetail/houseDetailEditConfirm.jsp" />
-	</definition>
-	<definition name="houseDetail/houseDetailDelete" extends="layout">
-		<put-attribute name="body" value="/WEB-INF/views/houseDetail/houseDetailDelete.jsp" />
-	</definition>
-	<definition name="houseDetail/houseDetailDetail" extends="layout">
-		<put-attribute name="body" value="/WEB-INF/views/houseDetail/houseDetailDetail.jsp" />
-	</definition>
+ 	<definition name="houseDetail/houseDetailList" template="/WEB-INF/views/houseDetail/houseDetailList.jsp"/>
+ 	<definition name="houseDetail/houseDetailInput" template="/WEB-INF/views/houseDetail/houseDetailInput.jsp"/>
+ 	<definition name="houseDetail/houseDetailInputConfirm" template="/WEB-INF/views/houseDetail/houseDetailInputConfirm.jsp"/>
+ 	<definition name="houseDetail/houseDetailEdit" template="/WEB-INF/views/houseDetail/houseDetailEdit.jsp"/>
+ 	<definition name="houseDetail/houseDetailEditConfirm" template="/WEB-INF/views/houseDetail/houseDetailEditConfirm.jsp"/>
+ 	<definition name="houseDetail/houseDetailDelete" template="/WEB-INF/views/houseDetail/houseDetailDelete.jsp"/>
+ 	<definition name="houseDetail/houseDetailDetail" template="/WEB-INF/views/houseDetail/houseDetailDetail.jsp"/>
 </tiles-definitions>

@@ -12,6 +12,8 @@ public class HouseDetailForm  implements Serializable {
 	private String houseName;
 
 	@Size(max=255)
+	private String linkId;
+	
 	private String houseDetail;
 
 	private String housePrice;
@@ -92,5 +94,10 @@ public class HouseDetailForm  implements Serializable {
 	public void setExclusive(Integer exclusive){
 		this.exclusive = exclusive;
 	}
-
+	public String getLinkId() {
+		return linkId;
+	}
+	public void setLinkId(String linkId) {
+		this.linkId = linkId;
+	}
 }
